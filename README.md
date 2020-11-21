@@ -1,1 +1,1 @@
-# Hanoi 3 Tower Solve 7 step using C lang and linkedlist 
+# Solution of Hanoi 3 Tower problem using c language and linked list structure
