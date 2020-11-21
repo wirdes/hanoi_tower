@@ -33,11 +33,48 @@ tower* pop(tower *head,int *element)
 }
 
 
-void printTower(tower* head)
+void printTower(tower* head,tower* head2,tower* head3)
 {
 
     tower *current;
     current = head;
+    printf("Tower 1");
+    if(current!= NULL)
+    {
+        printf(" : ");
+        do
+        {
+            printf("%d - ",current->data);
+            current = current->next;
+        }
+        while (current!= NULL);
+        printf("|\n");
+    }
+    else
+    {
+        printf(" : ");
+        printf("is Empty|\n");
+    }
+    printf("Tower 2");
+    current = head2;
+    if(current!= NULL)
+    {
+        printf(" : ");
+        do
+        {
+            printf("%d - ",current->data);
+            current = current->next;
+        }
+        while (current!= NULL);
+        printf("|\n");
+    }
+    else
+    {
+        printf(" : ");
+        printf("is Empty|\n");
+    }
+    printf("Tower 3");
+    current = head3;
     if(current!= NULL)
     {
         printf(" : ");
@@ -65,51 +102,51 @@ int main()
     tower1 = push(tower1,20);
     tower1 = push(tower1,10);
 
-    printf("Tower 1");printTower(tower1);
-    printf("Tower 2");printTower(tower2);
-    printf("Tower 3");printTower(tower3);
+    printTower(tower1,tower2,tower3);
+    
+    
     printf("-------STEP 1---------\n");
     tower1 = pop(tower1,&popElement);
     tower3 = push(tower3,popElement);
-    printf("Tower 1");printTower(tower1);
-    printf("Tower 2");printTower(tower2);
-    printf("Tower 3");printTower(tower3);
+    printTower(tower1,tower2,tower3);
+    
+    
     printf("-------STEP 2---------\n");   
     tower1 = pop(tower1,&popElement);
     tower2 = push(tower2,popElement);   
-    printf("Tower 1");printTower(tower1);
-    printf("Tower 2");printTower(tower2);
-    printf("Tower 3");printTower(tower3);
+    printTower(tower1,tower2,tower3);
+    
+    
     printf("-------STEP 3---------\n");   
     tower3 = pop(tower3,&popElement);
     tower2 = push(tower2,popElement);   
-    printf("Tower 1");printTower(tower1);
-    printf("Tower 2");printTower(tower2);
-    printf("Tower 3");printTower(tower3);
+    printTower(tower1,tower2,tower3);
+    
+    
     printf("-------STEP 4---------\n");   
     tower1 = pop(tower1,&popElement);
     tower3 = push(tower3,popElement);   
-    printf("Tower 1");printTower(tower1);
-    printf("Tower 2");printTower(tower2);
-    printf("Tower 3");printTower(tower3);     
+    printTower(tower1,tower2,tower3);
+    
+         
     printf("-------STEP 5---------\n");   
     tower2 = pop(tower2,&popElement);
     tower1 = push(tower1,popElement);   
-    printf("Tower 1");printTower(tower1);
-    printf("Tower 2");printTower(tower2);
-    printf("Tower 3");printTower(tower3);
+    printTower(tower1,tower2,tower3);
+    
+    
     printf("-------STEP 6---------\n");   
     tower2 = pop(tower2,&popElement);
     tower3 = push(tower3,popElement);   
-    printf("Tower 1");printTower(tower1);
-    printf("Tower 2");printTower(tower2);
-    printf("Tower 3");printTower(tower3);
+    printTower(tower1,tower2,tower3);
+    
+    
     printf("-------STEP 7---------\n");   
     tower1 = pop(tower1,&popElement);
     tower3 = push(tower3,popElement);   
-    printf("Tower 1");printTower(tower1);
-    printf("Tower 2");printTower(tower2);
-    printf("Tower 3");printTower(tower3);
+    printTower(tower1,tower2,tower3);
+    
+    
  
     return 0;
 }
