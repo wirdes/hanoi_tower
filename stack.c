@@ -17,10 +17,16 @@ tower* push(tower* head,int data)
     {
         exit(0);
     }
-    tmp->data = data;
-    tmp->next = head;
-    head = tmp;
-    return head;
+        if ( head != NULL   &&  head ->data <= data){
+            printf("Only smaller disc than previous disc can be added .\n");
+            return head;
+            
+
+        }
+        tmp->data = data;
+        tmp->next = head;
+        head = tmp;
+        return head;
 }
 
 tower* pop(tower *head,int *element)
